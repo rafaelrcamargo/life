@@ -1,8 +1,11 @@
 [package]
-name = "engine"
-version = "0.1.0"
 authors = ["rafaelrcamargo <66796237+rafaelrcamargo@users.noreply.github.com>"]
+description = "A simple game of life WASM engine"
 edition = "2018"
+license = "MIT"
+name = "engine"
+repository = "..."
+version = "0.1.0"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
@@ -17,7 +20,7 @@ wasm-bindgen = "0.2.84"
 # logging them with `console.error`. This is great for development, but requires
 # all the `std::fmt` and `std::panicking` infrastructure, so isn't great for
 # code size when deploying.
-console_error_panic_hook = { version = "0.1.7", optional = true }
+console_error_panic_hook = {version = "0.1.7", optional = true}
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3.34"

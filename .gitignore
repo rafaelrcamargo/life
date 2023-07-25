@@ -13,6 +13,8 @@ coverage
 out/
 build
 
+pnpm-lock.yaml
+
 # misc
 .DS_Store
 *.pem
@@ -34,3 +36,8 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# rust
+Cargo.lock
+**/target
+**/pkg

@@ -1,0 +1,22 @@
+{
+  "name": "engine",
+  "collaborators": [
+    "rafaelrcamargo <66796237+rafaelrcamargo@users.noreply.github.com>"
+  ],
+  "version": "0.1.0",
+  "scripts": {
+    "watch": "cargo watch -- wasm-pack build",
+    "wasm": "wasm-pack build"
+  },
+  "files": [
+    "./pkg/engine_bg.wasm",
+    "./pkg/engine.js",
+    "./pkg/engine_bg.js",
+    "./pkg/engine.d.ts"
+  ],
+  "module": "./pkg/engine.js",
+  "types": "./pkg/engine.d.ts",
+  "sideEffects": [
+    "./pkg/engine.js"
+  ]
+}

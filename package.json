@@ -1,11 +1,12 @@
 {
-  "name": "game-of-life",
+  "name": "life",
   "private": true,
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{ts,tsx,css,json,md}\" --ignore-path .gitignore",
-    "lint": "turbo run lint"
+    "lint": "turbo run lint",
+    "wasm": "wasm-pack build .\\packages\\engine\\"
   },
   "devDependencies": {
     "@turbo/gen": "^1.10.10",

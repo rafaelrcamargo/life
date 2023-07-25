@@ -1,2 +1,7 @@
 /** @type {import('next').NextConfig} */
-module.exports = {}
+module.exports = {
+  "webpack": (config) => {
+    config.experiments.asyncWebAssembly = true
+    return config
+  }
+}

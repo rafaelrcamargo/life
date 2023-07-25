@@ -1,0 +1,7 @@
+[workspace]
+members = ["./packages/*"]
+
+[workspace.package]
+authors = ["Rafael R. Camargo (https://github.com/rafaelrcamargo)"]
+description = "A simple game of life implementation in Rust + WASM & Next.js"
+documentation = "https://github.com/rafaelrcamargo/life"
