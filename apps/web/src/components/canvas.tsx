@@ -7,8 +7,6 @@ import { useEffect, useState } from "react"
 const INITIAL_SIZE = 32
 const INITIAL_DELAY = 100
 export const Canvas = () => {
-  console.log("render")
-
   const [size, setSize] = useState(INITIAL_SIZE)
   const [delay, setDelay] = useState(INITIAL_DELAY)
 
@@ -45,9 +43,9 @@ export const Canvas = () => {
   }, [delay])
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex gap-4">
-        🌐
+    <div className="flex flex-col gap-4 p-4 min-w-[50vw]">
+      <div className="flex flex-wrap md:flex-nowrap gap-6 pb-1 md:gap-4">
+        <span className="hidden md:flex">🌐</span>
         <Slider
           onValueCommit={x => setSize(x?.[0]!)}
           defaultValue={[INITIAL_SIZE]}
@@ -55,7 +53,7 @@ export const Canvas = () => {
           step={8}
           min={8}
         />
-        ⌚
+        <span className="hidden md:flex">⌚</span>
         <Slider
           onValueCommit={x => setDelay(x?.[0]!)}
           defaultValue={[INITIAL_DELAY]}
@@ -73,7 +71,7 @@ export const Canvas = () => {
         style={{ imageRendering: "pixelated" }}
       />
 
-      <div className="flex w-full gap-4">
+      <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
         {!playing ? (
           <button
             className="w-full bg-red-500 p-4 font-medium text-white duration-150 hover:scale-[1.025]"

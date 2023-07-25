@@ -1,7 +1,7 @@
 import { Dispatch, RefObject, SetStateAction, useEffect, useRef } from "react"
 
 export const BASE =
-  typeof window !== "undefined" && window.innerWidth <= 768 ? 256 : 640
+  typeof window === "undefined" ? 256 : window.innerWidth <= 768 ? 256 : 640
 const COLOR = "rgb(239 68 68)"
 
 const raw_render = (
@@ -23,7 +23,7 @@ const raw_render = (
       ctx.fillStyle = COLOR
       ctx.fillRect(x * SIZE, y * SIZE, SIZE, SIZE)
     } else {
-      ctx.strokeStyle = COLOR.replace(")", "/ 0.1)")
+      ctx.strokeStyle = COLOR.replace(")", "/ 0.05)")
       ctx.strokeRect(x * SIZE + 0.5, y * SIZE + 0.5, SIZE, SIZE)
     }
   })
